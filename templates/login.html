@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            background:#111827;
+            padding:25px;
+            border-radius:12px;
+            width:90%;
+            max-width:350px;
+            text-align:center;
+            box-shadow:0 0 20px #38bdf8;
+        }
+
+        input{
+            width:90%;
+            padding:10px;
+            margin:10px 0;
+            border:none;
+            border-radius:8px;
+        }
+
+        button{
+            width:95%;
+            padding:10px;
+            background:#38bdf8;
+            border:none;
+            border-radius:8px;
+            font-weight:bold;
+        }
+
+        a{
+            color:#22d3ee;
+            text-decoration:none;
+        }
+
+        p{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>🔑 Login</h2>
+
+    <form method="POST">
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>{{ msg }}</p>
+
+    <a href="/register">New user? Register</a>
+</div>
+
+</body>
+</html>

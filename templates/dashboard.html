@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#020617,#0f172a);
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            background:#111827;
+            padding:25px;
+            border-radius:12px;
+            width:90%;
+            max-width:400px;
+            text-align:center;
+            box-shadow:0 0 20px #34d399;
+        }
+
+        input{
+            width:90%;
+            padding:10px;
+            margin:10px 0;
+            border:none;
+            border-radius:8px;
+        }
+
+        button{
+            width:95%;
+            padding:10px;
+            background:#34d399;
+            border:none;
+            border-radius:8px;
+            font-weight:bold;
+        }
+
+        a{
+            color:#f87171;
+            text-decoration:none;
+            display:inline-block;
+            margin-top:10px;
+        }
+
+        p{
+            color:#22c55e;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>🛡 Welcome {{ user }}</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload File</button>
+    </form>
+
+    <p>{{ msg }}</p>
+
+    <a href="/logout">Logout</a>
+</div>
+
+</body>
+</html>
